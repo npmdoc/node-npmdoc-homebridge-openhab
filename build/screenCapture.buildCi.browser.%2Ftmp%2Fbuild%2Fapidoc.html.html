@@ -1,0 +1,4135 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/tommasomarchionni/homebridge-openHAB#readme">homebridge-openhab (v0.1.31)</a>
+</h1>
+<h4>Homebridge plugin for openHAB</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab">module homebridge-openhab</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.homebridge-openhab">
+            function <span class="apidocSignatureSpan"></span>homebridge-openhab
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.AbstractItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>AbstractItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ContactItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>ContactItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.DimmerItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>DimmerItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.FanItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>FanItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightbulbItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightbulbItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.MotionSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>MotionSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.OutletItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>OutletItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>RollershutterItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.SwitchItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>SwitchItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.TemperatureSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>TemperatureSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>ThermostatItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.WSListener">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>WSListener
+            <span class="apidocSignatureSpan">(itemName, itemUrl, ws, log, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>AbstractItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>ContactItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>DimmerItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>FanItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>ItemFactory</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>LightSensorItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>LightbulbItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>MotionSensorItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>OutletItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>RollershutterItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>SwitchItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>TemperatureSensorItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>ThermostatItem.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>Utility</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-openhab.</span>WSListener.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.AbstractItem">module homebridge-openhab.AbstractItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.AbstractItem.AbstractItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>AbstractItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.AbstractItem.prototype">module homebridge-openhab.AbstractItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.getInformationServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>getInformationServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.getServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>getServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.initListener">
+            function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>initListener
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.listenerFactory">
+            function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>listenerFactory
+            <span class="apidocSignatureSpan">(itemName, itemUrl, ws, log, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.ContactItem">module homebridge-openhab.ContactItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ContactItem.ContactItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>ContactItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.ContactItem.prototype">module homebridge-openhab.ContactItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ContactItem.prototype.checkItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>checkItemState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ContactItem.prototype.getItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>getItemState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ContactItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ContactItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.DimmerItem">module homebridge-openhab.DimmerItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.DimmerItem.DimmerItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>DimmerItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.DimmerItem.prototype">module homebridge-openhab.DimmerItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.getItemBrightnessState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>getItemBrightnessState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.getItemPowerState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>getItemPowerState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.getServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>getServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.setItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>setItem
+            <span class="apidocSignatureSpan">(value, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.FanItem">module homebridge-openhab.FanItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.FanItem.FanItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>FanItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.FanItem.prototype">module homebridge-openhab.FanItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.FanItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.FanItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.ItemFactory">module homebridge-openhab.ItemFactory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.AbstractItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>AbstractItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.ContactItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>ContactItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.DimmerItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>DimmerItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.Factory">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>Factory
+            <span class="apidocSignatureSpan">(OpenHABPlatform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.FanItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>FanItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.LightSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>LightSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.LightbulbItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>LightbulbItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.MotionSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>MotionSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.NumberItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>NumberItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.OutletItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>OutletItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.RollershutterItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>RollershutterItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.SwitchItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>SwitchItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.TemperatureSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>TemperatureSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ItemFactory.ThermostatItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>ThermostatItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.LightSensorItem">module homebridge-openhab.LightSensorItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightSensorItem.LightSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.LightSensorItem.prototype">module homebridge-openhab.LightSensorItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.checkItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>checkItemState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.getItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>getItemState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.LightbulbItem">module homebridge-openhab.LightbulbItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightbulbItem.LightbulbItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightbulbItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.LightbulbItem.prototype">module homebridge-openhab.LightbulbItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.LightbulbItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.LightbulbItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.MotionSensorItem">module homebridge-openhab.MotionSensorItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.MotionSensorItem.MotionSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>MotionSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.MotionSensorItem.prototype">module homebridge-openhab.MotionSensorItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.checkItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>checkItemState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.getItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>getItemState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.OutletItem">module homebridge-openhab.OutletItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.OutletItem.OutletItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>OutletItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.OutletItem.prototype">module homebridge-openhab.OutletItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.OutletItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.OutletItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.OutletItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.OutletItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.RollershutterItem">module homebridge-openhab.RollershutterItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem.RollershutterItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>RollershutterItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.RollershutterItem.prototype">module homebridge-openhab.RollershutterItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemCurrentPosition">
+            function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getItemCurrentPosition
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemPositionState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getItemPositionState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemTargetPosition">
+            function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getItemTargetPosition
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.setItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>setItem
+            <span class="apidocSignatureSpan">(value, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.SwitchItem">module homebridge-openhab.SwitchItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.SwitchItem.SwitchItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>SwitchItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.SwitchItem.prototype">module homebridge-openhab.SwitchItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.getItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>getItemState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.setItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>setItemState
+            <span class="apidocSignatureSpan">(value, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.TemperatureSensorItem">module homebridge-openhab.TemperatureSensorItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.TemperatureSensorItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>TemperatureSensorItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.TemperatureSensorItem.prototype">module homebridge-openhab.TemperatureSensorItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.checkItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>checkItemState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.getItemState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>getItemState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.updateCharacteristics">
+            function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>updateCharacteristics
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.ThermostatItem">module homebridge-openhab.ThermostatItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.ThermostatItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>ThermostatItem
+            <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.ThermostatItem.prototype">module homebridge-openhab.ThermostatItem.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.checkRelativeHumidityState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>checkRelativeHumidityState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.checkTemperatureState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>checkTemperatureState
+            <span class="apidocSignatureSpan">(state)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentHeatingCoolingStateMock">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getCurrentHeatingCoolingStateMock
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentRelativeHumidityState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getCurrentRelativeHumidityState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentTemperatureState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getCurrentTemperatureState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getOtherServices">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getOtherServices
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTargetHeatingCoolingStateMock">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getTargetHeatingCoolingStateMock
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTargetTemperatureState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getTargetTemperatureState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTemperatureDisplayUnits">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getTemperatureDisplayUnits
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.initEmitter">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>initEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.initListener">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>initListener
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentRelativeHumidityItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setCurrentRelativeHumidityItem
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentTemperatureCItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setCurrentTemperatureCItem
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentTemperatureFItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setCurrentTemperatureFItem
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetHeatingCoolingStateMock">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetHeatingCoolingStateMock
+            <span class="apidocSignatureSpan">(value, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureCItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureCItem
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureFItem">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureFItem
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureState">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureState
+            <span class="apidocSignatureSpan">(value, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureStateFromEmit">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureStateFromEmit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.updateCurrentRelativeHumidity">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>updateCurrentRelativeHumidity
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.updateCurrentTemperature">
+            function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>updateCurrentTemperature
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.Utility">module homebridge-openhab.Utility</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.Utility.addInheritance">
+            function <span class="apidocSignatureSpan">homebridge-openhab.Utility.</span>addInheritance
+            <span class="apidocSignatureSpan">(subclass, superclass)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.Utility.addSupportTo">
+            function <span class="apidocSignatureSpan">homebridge-openhab.Utility.</span>addSupportTo
+            <span class="apidocSignatureSpan">(subclass, superclass)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.WSListener">module homebridge-openhab.WSListener</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.WSListener.WSListener">
+            function <span class="apidocSignatureSpan">homebridge-openhab.</span>WSListener
+            <span class="apidocSignatureSpan">(itemName, itemUrl, ws, log, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-openhab.WSListener.prototype">module homebridge-openhab.WSListener.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.WSListener.prototype.runForever">
+            function <span class="apidocSignatureSpan">homebridge-openhab.WSListener.prototype.</span>runForever
+            <span class="apidocSignatureSpan">(interval)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-openhab.WSListener.prototype.startListener">
+            function <span class="apidocSignatureSpan">homebridge-openhab.WSListener.prototype.</span>startListener
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab" id="apidoc.module.homebridge-openhab">module homebridge-openhab</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.homebridge-openhab" id="apidoc.element.homebridge-openhab.homebridge-openhab">
+        function <span class="apidocSignatureSpan"></span>homebridge-openhab
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">homebridge-openhab = function (homebridge) {
+    Accessory = homebridge.hap.Accessory;
+    Homebridge = homebridge;
+
+    Utility.addSupportTo(ItemFactory.AbstractItem, Accessory);
+    Utility.addSupportTo(ItemFactory.SwitchItem, ItemFactory.AbstractItem);
+    Utility.addSupportTo(ItemFactory.LightbulbItem, ItemFactory.SwitchItem);
+    Utility.addSupportTo(ItemFactory.FanItem, ItemFactory.SwitchItem);
+    Utility.addSupportTo(ItemFactory.OutletItem, ItemFactory.SwitchItem);
+    Utility.addSupportTo(ItemFactory.DimmerItem, ItemFactory.AbstractItem);
+    Utility.addSupportTo(ItemFactory.RollershutterItem, ItemFactory.AbstractItem);
+    Utility.addSupportTo(ItemFactory.TemperatureSensorItem, ItemFactory.AbstractItem);
+    Utility.addSupportTo(ItemFactory.NumberItem, ItemFactory.TemperatureSensorItem);
+    Utility.addSupportTo(ItemFactory.ContactItem, ItemFactory.AbstractItem);
+    Utility.addSupportTo(ItemFactory.MotionSensorItem, ItemFactory.ContactItem);
+    Utility.addSupportTo(ItemFactory.LightSensorItem, ItemFactory.TemperatureSensorItem); //TODO ricontrollare
+    Utility.addSupportTo(ItemFactory.ThermostatItem, ItemFactory.AbstractItem);
+
+    homebridge.registerPlatform("homebridge-openhab", "openHAB", OpenHABPlatform);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.AbstractItem" id="apidoc.element.homebridge-openhab.AbstractItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>AbstractItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractItem = function (widget, platform, homebridge) {
+    this.platform = platform;
+    this.widget =  widget;
+    this.homebridge = homebridge;
+
+    this.label = this.widget.label;
+    this.url = this.widget.link;
+    this.state = this.widget.state;
+    this.log = this.platform.log;
+    this.itemType=this.widget.itemType;
+
+    this.setInitialState = false;
+    this.setFromOpenHAB = false;
+    this.informationService = undefined;
+    this.otherService = undefined;
+    this.listener = undefined;
+    this.ws = undefined;
+
+    if (platform.user &amp;&amp; platform.password) {
+        this.url = this.url.replace('http://', 'http://' + encodeURIComponent(this.platform.user) + ":" + encodeURIComponent(this
+.platform.password) + "@");
+    }
+    this.name = this.platform.useLabelForName ? this.label : this.widget.name;
+
+    AbstractItem.super_.call(this, this.name, homebridge.hap.uuid.generate(String(this.widget.name)));
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ContactItem" id="apidoc.element.homebridge-openhab.ContactItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>ContactItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ContactItem = function (widget, platform, homebridge) {
+    ContactItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.DimmerItem" id="apidoc.element.homebridge-openhab.DimmerItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>DimmerItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DimmerItem = function (widget, platform, homebridge) {
+    DimmerItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.FanItem" id="apidoc.element.homebridge-openhab.FanItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>FanItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">FanItem = function (widget, platform, homebridge) {
+    FanItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightSensorItem" id="apidoc.element.homebridge-openhab.LightSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LightSensorItem = function (widget, platform, homebridge) {
+    LightSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightbulbItem" id="apidoc.element.homebridge-openhab.LightbulbItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightbulbItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LightbulbItem = function (widget, platform, homebridge) {
+    LightbulbItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.MotionSensorItem" id="apidoc.element.homebridge-openhab.MotionSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>MotionSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MotionSensorItem = function (widget, platform, homebridge) {
+    MotionSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.OutletItem" id="apidoc.element.homebridge-openhab.OutletItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>OutletItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">OutletItem = function (widget, platform, homebridge) {
+    OutletItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem" id="apidoc.element.homebridge-openhab.RollershutterItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>RollershutterItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RollershutterItem = function (widget, platform, homebridge) {
+    RollershutterItem.super_.call(this, widget,platform,homebridge);
+    this.positionState = this.homebridge.hap.Characteristic.PositionState.STOPPED;
+    this.currentPosition = 100;
+    this.targetPosition = 100;
+    this.startedPosition = 100;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.SwitchItem" id="apidoc.element.homebridge-openhab.SwitchItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>SwitchItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SwitchItem = function (widget, platform, homebridge) {
+    SwitchItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.TemperatureSensorItem" id="apidoc.element.homebridge-openhab.TemperatureSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>TemperatureSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TemperatureSensorItem = function (widget, platform, homebridge) {
+    TemperatureSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem" id="apidoc.element.homebridge-openhab.ThermostatItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>ThermostatItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ThermostatItem = function (widget, platform, homebridge) {
+    //General
+    this.temperatureDisplayUnits = homebridge.hap.Characteristic.TemperatureDisplayUnits.CELSIUS;
+    this.thermostatItemEmitter = new EventEmitter();
+    this.initEmitter();
+
+    //CurrentTemperature
+    this.itemCurrentTemperature = undefined;
+    this.listenerCurrentTemperature = undefined;
+    this.wsCurrentTemperature = undefined;
+
+    //CurrentRelativeHumidity
+    this.itemCurrentRelativeHumidity = undefined;
+    this.listenerCurrentRelativeHumidity = undefined;
+    this.wsCurrentRelativeHumidity = undefined;
+
+    //TargetTemperature
+    this.itemTargetTemperature = undefined;
+    this.setTargetTemperatureInitialState = false;
+    this.targetTemperatureArr = [];
+    this.targetTemperatureInProgress = false;
+    this.targetTemperatureTimeout = 1000;
+
+    ThermostatItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.WSListener" id="apidoc.element.homebridge-openhab.WSListener">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>WSListener
+        <span class="apidocSignatureSpan">(itemName, itemUrl, ws, log, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">WSListener = function (itemName, itemUrl, ws, log, callback) {
+    this.itemName = itemName;
+    this.itemUrl = itemUrl;
+    this.log = log;
+    this.ws = ws;
+    this.callback = callback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.AbstractItem" id="apidoc.module.homebridge-openhab.AbstractItem">module homebridge-openhab.AbstractItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.AbstractItem.AbstractItem" id="apidoc.element.homebridge-openhab.AbstractItem.AbstractItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>AbstractItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractItem = function (widget, platform, homebridge) {
+    this.platform = platform;
+    this.widget =  widget;
+    this.homebridge = homebridge;
+
+    this.label = this.widget.label;
+    this.url = this.widget.link;
+    this.state = this.widget.state;
+    this.log = this.platform.log;
+    this.itemType=this.widget.itemType;
+
+    this.setInitialState = false;
+    this.setFromOpenHAB = false;
+    this.informationService = undefined;
+    this.otherService = undefined;
+    this.listener = undefined;
+    this.ws = undefined;
+
+    if (platform.user &amp;&amp; platform.password) {
+        this.url = this.url.replace('http://', 'http://' + encodeURIComponent(this.platform.user) + ":" + encodeURIComponent(this
+.platform.password) + "@");
+    }
+    this.name = this.platform.useLabelForName ? this.label : this.widget.name;
+
+    AbstractItem.super_.call(this, this.name, homebridge.hap.uuid.generate(String(this.widget.name)));
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.AbstractItem.prototype" id="apidoc.module.homebridge-openhab.AbstractItem.prototype">module homebridge-openhab.AbstractItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.getInformationServices" id="apidoc.element.homebridge-openhab.AbstractItem.prototype.getInformationServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>getInformationServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInformationServices = function () {
+    var informationService = new this.homebridge.hap.Service.AccessoryInformation();
+
+    informationService
+        .setCharacteristic(this.homebridge.hap.Characteristic.Manufacturer, this.manufacturer)
+        .setCharacteristic(this.homebridge.hap.Characteristic.Model, this.model)
+        .setCharacteristic(this.homebridge.hap.Characteristic.SerialNumber, this.serialNumber)
+        .setCharacteristic(this.homebridge.hap.Characteristic.Name, this.name);
+    return informationService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    AbstractItem.super_.call(this, this.name, homebridge.hap.uuid.generate(String(this.widget.name)));
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.<span class="apidocCodeKeywordSpan">getInformationServices</span>();
+    this.otherService = this.getOtherServices();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.AbstractItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.getServices" id="apidoc.element.homebridge-openhab.AbstractItem.prototype.getServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>getServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getServices = function () {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.getOtherServices();
+    return [this.informationService, this.otherService];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.initListener" id="apidoc.element.homebridge-openhab.AbstractItem.prototype.initListener">
+        function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>initListener
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initListener = function () {
+    if (typeof this.listener == 'undefined' || typeof this.ws == 'undefined') {
+        this.listener = this.listenerFactory(this.name,this.url,this.ws,this.log, this.updateCharacteristics.bind(this));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.name = this.platform.useLabelForName ? this.label : this.widget.name;
+
+    AbstractItem.super_.call(this, this.name, homebridge.hap.uuid.generate(String(this.widget.name)));
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.<span class="apidocCodeKeywordSpan">initListener</span>();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.getOtherServices();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.AbstractItem.prototype.listenerFactory" id="apidoc.element.homebridge-openhab.AbstractItem.prototype.listenerFactory">
+        function <span class="apidocSignatureSpan">homebridge-openhab.AbstractItem.prototype.</span>listenerFactory
+        <span class="apidocSignatureSpan">(itemName, itemUrl, ws, log, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerFactory = function (itemName, itemUrl, ws, log, callback) {
+    return new WSListener(itemName,itemUrl,ws,log,callback.bind(this)).startListener();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        .setCharacteristic(this.homebridge.hap.Characteristic.SerialNumber, this.serialNumber)
+        .setCharacteristic(this.homebridge.hap.Characteristic.Name, this.name);
+    return informationService;
+};
+
+AbstractItem.prototype.initListener = function() {
+    if (typeof this.listener == 'undefined' || typeof this.ws == 'undefined') {
+        this.listener = this.<span class="apidocCodeKeywordSpan">listenerFactory</span>(this.name,this.url,this.ws,this.log, this
+.updateCharacteristics.bind(this));
+    }
+};
+
+AbstractItem.prototype.listenerFactory = function(itemName,itemUrl,ws,log,callback) {
+    return new WSListener(itemName,itemUrl,ws,log,callback.bind(this)).startListener();
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.ContactItem" id="apidoc.module.homebridge-openhab.ContactItem">module homebridge-openhab.ContactItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ContactItem.ContactItem" id="apidoc.element.homebridge-openhab.ContactItem.ContactItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>ContactItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ContactItem = function (widget, platform, homebridge) {
+    ContactItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.ContactItem.prototype" id="apidoc.module.homebridge-openhab.ContactItem.prototype">module homebridge-openhab.ContactItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ContactItem.prototype.checkItemState" id="apidoc.element.homebridge-openhab.ContactItem.prototype.checkItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>checkItemState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkItemState = function (state) {
+    if ('Unitialized' === state){
+        return this.homebridge.hap.Characteristic.ContactSensorState.CONTACT_NOT_DETECTED;
+    } else if ('CLOSED' === state){
+        return this.homebridge.hap.Characteristic.ContactSensorState.CONTACT_NOT_DETECTED;
+    } else {
+        return this.homebridge.hap.Characteristic.ContactSensorState.CONTACT_DETECTED;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ContactItem.prototype.getOtherServices = function() {
+var otherService = new this.homebridge.hap.Service.ContactSensor();
+
+otherService.getCharacteristic(this.homebridge.hap.Characteristic.ContactSensorState)
+    .on('get', this.getItemState.bind(this))
+    .setValue(this.<span class="apidocCodeKeywordSpan">checkItemState</span>(this.state));
+
+return otherService;
+};
+
+ContactItem.prototype.checkItemState = function(state) {
+if ('Unitialized' === state){
+    return this.homebridge.hap.Characteristic.ContactSensorState.CONTACT_NOT_DETECTED;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ContactItem.prototype.getItemState" id="apidoc.element.homebridge-openhab.ContactItem.prototype.getItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>getItemState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemState = function (callback) {
+
+    var self = this;
+    this.log("iOS - request power state from " + this.name);
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            callback(undefined,self.checkItemState(body));
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ContactItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.ContactItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.ContactSensor();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.ContactSensorState)
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.checkItemState(this.state));
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ContactItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.ContactItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ContactItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.ContactSensorState)
+        .setValue(this.checkItemState(message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.DimmerItem" id="apidoc.module.homebridge-openhab.DimmerItem">module homebridge-openhab.DimmerItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.DimmerItem.DimmerItem" id="apidoc.element.homebridge-openhab.DimmerItem.DimmerItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>DimmerItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DimmerItem = function (widget, platform, homebridge) {
+    DimmerItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.DimmerItem.prototype" id="apidoc.module.homebridge-openhab.DimmerItem.prototype">module homebridge-openhab.DimmerItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.getItemBrightnessState" id="apidoc.element.homebridge-openhab.DimmerItem.prototype.getItemBrightnessState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>getItemBrightnessState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemBrightnessState = function (callback) {
+
+    var self = this;
+
+    this.log("iOS - request brightness state from " + this.name);
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            callback(undefined,+body);
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.getItemPowerState" id="apidoc.element.homebridge-openhab.DimmerItem.prototype.getItemPowerState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>getItemPowerState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemPowerState = function (callback) {
+
+    var self = this;
+
+    this.log("iOS - request power state from " + this.name);
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            callback(undefined,+body &gt; 0);
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.getServices" id="apidoc.element.homebridge-openhab.DimmerItem.prototype.getServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>getServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getServices = function () {
+
+    this.initListener();
+    this.setInitialState = true;
+
+    this.informationService = this.getInformationServices();
+
+    this.otherService = new this.homebridge.hap.Service.Lightbulb();
+    this.otherService.getCharacteristic(this.homebridge.hap.Characteristic.On)
+        .on('set', this.setItem.bind(this))
+        .on('get', this.getItemPowerState.bind(this))
+        .setValue(+this.state &gt; 0);
+
+    this.setInitialState = true;
+
+    this.otherService.addCharacteristic(this.homebridge.hap.Characteristic.Brightness)
+        .on('set', this.setItem.bind(this))
+        .on('get', this.getItemBrightnessState.bind(this))
+        .setValue(+this.state);
+
+    return [this.informationService, this.otherService];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.setItem" id="apidoc.element.homebridge-openhab.DimmerItem.prototype.setItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>setItem
+        <span class="apidocSignatureSpan">(value, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setItem = function (value, callback) {
+
+    var self = this;
+
+    if (this.setInitialState) {
+        this.setInitialState = false;
+        callback();
+        return;
+    }
+
+    if (this.setFromOpenHAB) {
+        callback();
+        return;
+    }
+
+    this.log("iOS - send message to " + this.name + ": " + value);
+    var command = 0;
+    if (typeof value === 'boolean') {
+        command = value ? '100' : '0';
+    } else {
+        command = "" + value;
+    }
+    request.post(
+        this.url,
+        {
+            body: command,
+            headers: {'Content-Type': 'text/plain'}
+        },
+        function (error, response, body) {
+            if (!error &amp;&amp; response.statusCode == 201) {
+                self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            } else {
+                self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+            }
+            callback();
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.DimmerItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.DimmerItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.DimmerItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+
+    this.setFromOpenHAB = true;
+    var brightness = +message;
+    var steps = 2;
+    if (brightness &gt;= 0) {
+        this.otherService.getCharacteristic(this.homebridge.hap.Characteristic.Brightness)
+            .setValue(brightness,
+                function() {
+                    steps--;
+                    if (!steps) {
+                        this.setFromOpenHAB = false;
+                    }
+                }.bind(this));
+        this.otherService.getCharacteristic(this.homebridge.hap.Characteristic.On)
+            .setValue(brightness &gt; 0,
+                function() {
+                    steps--;
+                    if (!steps) {
+                        this.setFromOpenHAB = false;
+                    }
+                }.bind(this));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.FanItem" id="apidoc.module.homebridge-openhab.FanItem">module homebridge-openhab.FanItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.FanItem.FanItem" id="apidoc.element.homebridge-openhab.FanItem.FanItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>FanItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">FanItem = function (widget, platform, homebridge) {
+    FanItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.FanItem.prototype" id="apidoc.module.homebridge-openhab.FanItem.prototype">module homebridge-openhab.FanItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.FanItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.FanItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.FanItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.Fan();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.On)
+        .on('set', this.setItemState.bind(this))
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.state === 'ON');
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.ItemFactory" id="apidoc.module.homebridge-openhab.ItemFactory">module homebridge-openhab.ItemFactory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.AbstractItem" id="apidoc.element.homebridge-openhab.ItemFactory.AbstractItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>AbstractItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractItem = function (widget, platform, homebridge) {
+    this.platform = platform;
+    this.widget =  widget;
+    this.homebridge = homebridge;
+
+    this.label = this.widget.label;
+    this.url = this.widget.link;
+    this.state = this.widget.state;
+    this.log = this.platform.log;
+    this.itemType=this.widget.itemType;
+
+    this.setInitialState = false;
+    this.setFromOpenHAB = false;
+    this.informationService = undefined;
+    this.otherService = undefined;
+    this.listener = undefined;
+    this.ws = undefined;
+
+    if (platform.user &amp;&amp; platform.password) {
+        this.url = this.url.replace('http://', 'http://' + encodeURIComponent(this.platform.user) + ":" + encodeURIComponent(this
+.platform.password) + "@");
+    }
+    this.name = this.platform.useLabelForName ? this.label : this.widget.name;
+
+    AbstractItem.super_.call(this, this.name, homebridge.hap.uuid.generate(String(this.widget.name)));
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.ContactItem" id="apidoc.element.homebridge-openhab.ItemFactory.ContactItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>ContactItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ContactItem = function (widget, platform, homebridge) {
+    ContactItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.DimmerItem" id="apidoc.element.homebridge-openhab.ItemFactory.DimmerItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>DimmerItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DimmerItem = function (widget, platform, homebridge) {
+    DimmerItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.Factory" id="apidoc.element.homebridge-openhab.ItemFactory.Factory">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>Factory
+        <span class="apidocSignatureSpan">(OpenHABPlatform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Factory = function (OpenHABPlatform, homebridge) {
+    this.platform = OpenHABPlatform;
+    this.log = this.platform.log;
+    this.homebridge = homebridge;
+    this.itemList = [];
+    this.uniqueIds = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.customAttrs = [];
+}
+}
+
+OpenHABPlatform.prototype.accessories = function(callback) {
+var that = this;
+this.log("Platform - Fetching OpenHAB devices.");
+var itemFactory = new ItemFactory.<span class="apidocCodeKeywordSpan">Factory</span>(this,Homebridge);
+var url = itemFactory.sitemapUrl();
+this.log("Platform - Connecting to " + url);
+request.get({
+    url: url,
+    json: true
+}, function(err, response, json) {
+    if (!err &amp;&amp; response.statusCode == 200) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.FanItem" id="apidoc.element.homebridge-openhab.ItemFactory.FanItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>FanItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">FanItem = function (widget, platform, homebridge) {
+    FanItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.LightSensorItem" id="apidoc.element.homebridge-openhab.ItemFactory.LightSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>LightSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LightSensorItem = function (widget, platform, homebridge) {
+    LightSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.LightbulbItem" id="apidoc.element.homebridge-openhab.ItemFactory.LightbulbItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>LightbulbItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LightbulbItem = function (widget, platform, homebridge) {
+    LightbulbItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.MotionSensorItem" id="apidoc.element.homebridge-openhab.ItemFactory.MotionSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>MotionSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MotionSensorItem = function (widget, platform, homebridge) {
+    MotionSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.NumberItem" id="apidoc.element.homebridge-openhab.ItemFactory.NumberItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>NumberItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">NumberItem = function (widget, platform, homebridge) {
+    NumberItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.OutletItem" id="apidoc.element.homebridge-openhab.ItemFactory.OutletItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>OutletItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">OutletItem = function (widget, platform, homebridge) {
+    OutletItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.RollershutterItem" id="apidoc.element.homebridge-openhab.ItemFactory.RollershutterItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>RollershutterItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RollershutterItem = function (widget, platform, homebridge) {
+    RollershutterItem.super_.call(this, widget,platform,homebridge);
+    this.positionState = this.homebridge.hap.Characteristic.PositionState.STOPPED;
+    this.currentPosition = 100;
+    this.targetPosition = 100;
+    this.startedPosition = 100;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.SwitchItem" id="apidoc.element.homebridge-openhab.ItemFactory.SwitchItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>SwitchItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SwitchItem = function (widget, platform, homebridge) {
+    SwitchItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.TemperatureSensorItem" id="apidoc.element.homebridge-openhab.ItemFactory.TemperatureSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>TemperatureSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TemperatureSensorItem = function (widget, platform, homebridge) {
+    TemperatureSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ItemFactory.ThermostatItem" id="apidoc.element.homebridge-openhab.ItemFactory.ThermostatItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ItemFactory.</span>ThermostatItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ThermostatItem = function (widget, platform, homebridge) {
+    //General
+    this.temperatureDisplayUnits = homebridge.hap.Characteristic.TemperatureDisplayUnits.CELSIUS;
+    this.thermostatItemEmitter = new EventEmitter();
+    this.initEmitter();
+
+    //CurrentTemperature
+    this.itemCurrentTemperature = undefined;
+    this.listenerCurrentTemperature = undefined;
+    this.wsCurrentTemperature = undefined;
+
+    //CurrentRelativeHumidity
+    this.itemCurrentRelativeHumidity = undefined;
+    this.listenerCurrentRelativeHumidity = undefined;
+    this.wsCurrentRelativeHumidity = undefined;
+
+    //TargetTemperature
+    this.itemTargetTemperature = undefined;
+    this.setTargetTemperatureInitialState = false;
+    this.targetTemperatureArr = [];
+    this.targetTemperatureInProgress = false;
+    this.targetTemperatureTimeout = 1000;
+
+    ThermostatItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.LightSensorItem" id="apidoc.module.homebridge-openhab.LightSensorItem">module homebridge-openhab.LightSensorItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightSensorItem.LightSensorItem" id="apidoc.element.homebridge-openhab.LightSensorItem.LightSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LightSensorItem = function (widget, platform, homebridge) {
+    LightSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.LightSensorItem.prototype" id="apidoc.module.homebridge-openhab.LightSensorItem.prototype">module homebridge-openhab.LightSensorItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.checkItemState" id="apidoc.element.homebridge-openhab.LightSensorItem.prototype.checkItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>checkItemState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkItemState = function (state) {
+    if ('Unitialized' === state){
+        return 0.0;
+    }
+    return +state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ContactItem.prototype.getOtherServices = function() {
+var otherService = new this.homebridge.hap.Service.ContactSensor();
+
+otherService.getCharacteristic(this.homebridge.hap.Characteristic.ContactSensorState)
+    .on('get', this.getItemState.bind(this))
+    .setValue(this.<span class="apidocCodeKeywordSpan">checkItemState</span>(this.state));
+
+return otherService;
+};
+
+ContactItem.prototype.checkItemState = function(state) {
+if ('Unitialized' === state){
+    return this.homebridge.hap.Characteristic.ContactSensorState.CONTACT_NOT_DETECTED;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.getItemState" id="apidoc.element.homebridge-openhab.LightSensorItem.prototype.getItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>getItemState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemState = function (callback) {
+
+    var self = this;
+
+    this.log("iOS - request state from " + this.name);
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            callback(undefined,self.checkItemState(body));
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.LightSensorItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.LightSensor();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.CurrentAmbientLightLevel)
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.checkItemState(this.state));
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightSensorItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.LightSensorItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.LightSensorItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.CurrentAmbientLightLevel)
+        .setValue(this.checkItemState(message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.LightbulbItem" id="apidoc.module.homebridge-openhab.LightbulbItem">module homebridge-openhab.LightbulbItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightbulbItem.LightbulbItem" id="apidoc.element.homebridge-openhab.LightbulbItem.LightbulbItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>LightbulbItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LightbulbItem = function (widget, platform, homebridge) {
+    LightbulbItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.LightbulbItem.prototype" id="apidoc.module.homebridge-openhab.LightbulbItem.prototype">module homebridge-openhab.LightbulbItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.LightbulbItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.LightbulbItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.LightbulbItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.Lightbulb();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.On)
+        .on('set', this.setItemState.bind(this))
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.state === 'ON');
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.MotionSensorItem" id="apidoc.module.homebridge-openhab.MotionSensorItem">module homebridge-openhab.MotionSensorItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.MotionSensorItem.MotionSensorItem" id="apidoc.element.homebridge-openhab.MotionSensorItem.MotionSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>MotionSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MotionSensorItem = function (widget, platform, homebridge) {
+    MotionSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.MotionSensorItem.prototype" id="apidoc.module.homebridge-openhab.MotionSensorItem.prototype">module homebridge-openhab.MotionSensorItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.checkItemState" id="apidoc.element.homebridge-openhab.MotionSensorItem.prototype.checkItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>checkItemState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkItemState = function (state) {
+    return !('Unitialized' === state || 'CLOSED' === state || false === state || 'false' === state.toLowerCase());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ContactItem.prototype.getOtherServices = function() {
+var otherService = new this.homebridge.hap.Service.ContactSensor();
+
+otherService.getCharacteristic(this.homebridge.hap.Characteristic.ContactSensorState)
+    .on('get', this.getItemState.bind(this))
+    .setValue(this.<span class="apidocCodeKeywordSpan">checkItemState</span>(this.state));
+
+return otherService;
+};
+
+ContactItem.prototype.checkItemState = function(state) {
+if ('Unitialized' === state){
+    return this.homebridge.hap.Characteristic.ContactSensorState.CONTACT_NOT_DETECTED;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.getItemState" id="apidoc.element.homebridge-openhab.MotionSensorItem.prototype.getItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>getItemState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemState = function (callback) {
+    var self = this;
+
+    this.log("iOS - request state from " + this.name);
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            callback(undefined,self.checkItemState(body));
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.MotionSensorItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.MotionSensor();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.MotionDetected)
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.checkItemState(this.state));
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.MotionSensorItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.MotionSensorItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.MotionSensorItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.MotionDetected)
+        .setValue(this.checkItemState(message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.OutletItem" id="apidoc.module.homebridge-openhab.OutletItem">module homebridge-openhab.OutletItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.OutletItem.OutletItem" id="apidoc.element.homebridge-openhab.OutletItem.OutletItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>OutletItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">OutletItem = function (widget, platform, homebridge) {
+    OutletItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.OutletItem.prototype" id="apidoc.module.homebridge-openhab.OutletItem.prototype">module homebridge-openhab.OutletItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.OutletItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.OutletItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.OutletItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.Outlet();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.On)
+        .on('set', this.setItemState.bind(this))
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.state === 'ON');
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.OutletInUse)
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.state === 'ON');
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.OutletItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.OutletItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.OutletItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+
+    this.setFromOpenHAB = true;
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.On)
+        .setValue(message === 'ON',
+            function() {
+                this.setFromOpenHAB = false;
+            }.bind(this)
+        );
+
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.OutletInUse)
+        .setValue(message === 'ON',
+            function() {
+                this.setFromOpenHAB = false;
+            }.bind(this)
+        );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.RollershutterItem" id="apidoc.module.homebridge-openhab.RollershutterItem">module homebridge-openhab.RollershutterItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem.RollershutterItem" id="apidoc.element.homebridge-openhab.RollershutterItem.RollershutterItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>RollershutterItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RollershutterItem = function (widget, platform, homebridge) {
+    RollershutterItem.super_.call(this, widget,platform,homebridge);
+    this.positionState = this.homebridge.hap.Characteristic.PositionState.STOPPED;
+    this.currentPosition = 100;
+    this.targetPosition = 100;
+    this.startedPosition = 100;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.RollershutterItem.prototype" id="apidoc.module.homebridge-openhab.RollershutterItem.prototype">module homebridge-openhab.RollershutterItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemCurrentPosition" id="apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemCurrentPosition">
+        function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getItemCurrentPosition
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemCurrentPosition = function (callback) {
+    var self = this;
+    this.log("iOS - request current position state from " + this.name);
+
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+
+            self.log("OpenHAB HTTP - response from " + self.name + ": " +body);
+            self.currentPosition = parseInt(body);
+            callback(undefined,parseInt(body));
+
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemPositionState" id="apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemPositionState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getItemPositionState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemPositionState = function (callback) {
+    this.log("iOS - request position state from " + this.name);
+    this.log("Platform - response from " + this.name + ": " + this.positionState);
+    callback(undefined,this.positionState);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemTargetPosition" id="apidoc.element.homebridge-openhab.RollershutterItem.prototype.getItemTargetPosition">
+        function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getItemTargetPosition
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemTargetPosition = function (callback) {
+    this.log("iOS - get target position state from " + this.name);
+    this.log("Platform - response from " + this.name + ": " + this.targetPosition);
+    callback(undefined,this.targetPosition);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.getServices" id="apidoc.element.homebridge-openhab.RollershutterItem.prototype.getServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>getServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getServices = function () {
+
+    this.initListener();
+
+    this.informationService = this.getInformationServices();
+
+    this.otherService = new this.homebridge.hap.Service.WindowCovering();
+
+    this.otherService.getCharacteristic(this.homebridge.hap.Characteristic.CurrentPosition)
+        .on('get', this.getItemCurrentPosition.bind(this))
+        .setValue(this.currentPosition);
+
+    this.setInitialState = true;
+
+    this.otherService.getCharacteristic(this.homebridge.hap.Characteristic.TargetPosition)
+        .on('set', this.setItem.bind(this))
+        .on('get', this.getItemTargetPosition.bind(this))
+        .setValue(this.currentPosition);
+
+    this.otherService.getCharacteristic(this.homebridge.hap.Characteristic.PositionState)
+        .on('get', this.getItemPositionState.bind(this))
+        .setValue(this.positionState);
+
+    return [this.informationService, this.otherService];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.setItem" id="apidoc.element.homebridge-openhab.RollershutterItem.prototype.setItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>setItem
+        <span class="apidocSignatureSpan">(value, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setItem = function (value, callback) {
+
+    var self = this;
+
+    if (this.setInitialState) {
+        this.setInitialState = false;
+        callback();
+        return;
+    }
+
+    this.startedPosition = this.currentPosition;
+
+    this.log("iOS - send message to " + this.name + ": " + value);
+
+    var command = 0;
+    if (typeof value === 'boolean') {
+        command = value ? '100' : '0';
+    } else {
+        command = "" + value;
+    }
+    request.post(
+        this.url,
+        {
+            body: command,
+            headers: {'Content-Type': 'text/plain'}
+        },
+        function (error, response, body) {
+            if (!error &amp;&amp; response.statusCode == 201) {
+                self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+                self.targetPosition = parseInt(value);
+            } else {
+                self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+            }
+            callback();
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.RollershutterItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.RollershutterItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.RollershutterItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+
+    if (parseInt(message) == this.targetPosition) {
+        var ps = this.homebridge.hap.Characteristic.PositionState.STOPPED;
+        var cs = parseInt(message);
+    } else if (parseInt(message) &gt; this.targetPosition){
+        var ps = this.homebridge.hap.Characteristic.PositionState.INCREASING;
+        var cs = this.startedPosition;
+    } else {
+        var ps = this.homebridge.hap.Characteristic.PositionState.DECREASING;
+        var cs = this.startedPosition;
+    }
+
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.PositionState)
+        .setValue(ps);
+
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.CurrentPosition)
+        .setValue(parseInt(cs));
+    this.currentPosition = parseInt(cs);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.SwitchItem" id="apidoc.module.homebridge-openhab.SwitchItem">module homebridge-openhab.SwitchItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.SwitchItem.SwitchItem" id="apidoc.element.homebridge-openhab.SwitchItem.SwitchItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>SwitchItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SwitchItem = function (widget, platform, homebridge) {
+    SwitchItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.SwitchItem.prototype" id="apidoc.module.homebridge-openhab.SwitchItem.prototype">module homebridge-openhab.SwitchItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.getItemState" id="apidoc.element.homebridge-openhab.SwitchItem.prototype.getItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>getItemState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemState = function (callback) {
+
+    var self = this;
+
+    this.log("iOS - request power state from " + this.name);
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            callback(undefined,body === "ON");
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.SwitchItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.Switch();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.On)
+        .on('set', this.setItemState.bind(this))
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.state === 'ON');
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.setItemState" id="apidoc.element.homebridge-openhab.SwitchItem.prototype.setItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>setItemState
+        <span class="apidocSignatureSpan">(value, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setItemState = function (value, callback) {
+
+    var self = this;
+
+    if (this.setInitialState) {
+        this.setInitialState = false;
+        callback();
+        return;
+    }
+
+    if (this.setFromOpenHAB) {
+        callback();
+        return;
+    }
+
+    this.log("iOS - send message to " + this.name + ": " + value);
+    var command = value ? 'ON' : 'OFF';
+    request.post(
+        this.url,
+        { body: command },
+        function (error, response, body) {
+            if (!error &amp;&amp; response.statusCode == 201) {
+                self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            } else {
+                self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+            }
+            callback();
+        }
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.SwitchItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.SwitchItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.SwitchItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+
+    this.setFromOpenHAB = true;
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.On)
+        .setValue(message === 'ON',
+            function() {
+                this.setFromOpenHAB = false;
+            }.bind(this)
+        );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.TemperatureSensorItem" id="apidoc.module.homebridge-openhab.TemperatureSensorItem">module homebridge-openhab.TemperatureSensorItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.TemperatureSensorItem" id="apidoc.element.homebridge-openhab.TemperatureSensorItem.TemperatureSensorItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>TemperatureSensorItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TemperatureSensorItem = function (widget, platform, homebridge) {
+    TemperatureSensorItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.TemperatureSensorItem.prototype" id="apidoc.module.homebridge-openhab.TemperatureSensorItem.prototype">module homebridge-openhab.TemperatureSensorItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.checkItemState" id="apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.checkItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>checkItemState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkItemState = function (state) {
+    if ('Unitialized' === state){
+        return 0.0;
+    }
+    return +state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ContactItem.prototype.getOtherServices = function() {
+var otherService = new this.homebridge.hap.Service.ContactSensor();
+
+otherService.getCharacteristic(this.homebridge.hap.Characteristic.ContactSensorState)
+    .on('get', this.getItemState.bind(this))
+    .setValue(this.<span class="apidocCodeKeywordSpan">checkItemState</span>(this.state));
+
+return otherService;
+};
+
+ContactItem.prototype.checkItemState = function(state) {
+if ('Unitialized' === state){
+    return this.homebridge.hap.Characteristic.ContactSensorState.CONTACT_NOT_DETECTED;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.getItemState" id="apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.getItemState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>getItemState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getItemState = function (callback) {
+
+    var self = this;
+
+    this.log("iOS - request power state from " + this.name);
+    request(this.url + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.name + ": " + body);
+            callback(undefined,self.checkItemState(body));
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.name + ": " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.TemperatureSensor();
+
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.CurrentTemperature)
+        .on('get', this.getItemState.bind(this))
+        .setValue(this.checkItemState(this.state));
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.updateCharacteristics" id="apidoc.element.homebridge-openhab.TemperatureSensorItem.prototype.updateCharacteristics">
+        function <span class="apidocSignatureSpan">homebridge-openhab.TemperatureSensorItem.prototype.</span>updateCharacteristics
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCharacteristics = function (message) {
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.CurrentTemperature)
+        .setValue(this.checkItemState(message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.ThermostatItem" id="apidoc.module.homebridge-openhab.ThermostatItem">module homebridge-openhab.ThermostatItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.ThermostatItem" id="apidoc.element.homebridge-openhab.ThermostatItem.ThermostatItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>ThermostatItem
+        <span class="apidocSignatureSpan">(widget, platform, homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ThermostatItem = function (widget, platform, homebridge) {
+    //General
+    this.temperatureDisplayUnits = homebridge.hap.Characteristic.TemperatureDisplayUnits.CELSIUS;
+    this.thermostatItemEmitter = new EventEmitter();
+    this.initEmitter();
+
+    //CurrentTemperature
+    this.itemCurrentTemperature = undefined;
+    this.listenerCurrentTemperature = undefined;
+    this.wsCurrentTemperature = undefined;
+
+    //CurrentRelativeHumidity
+    this.itemCurrentRelativeHumidity = undefined;
+    this.listenerCurrentRelativeHumidity = undefined;
+    this.wsCurrentRelativeHumidity = undefined;
+
+    //TargetTemperature
+    this.itemTargetTemperature = undefined;
+    this.setTargetTemperatureInitialState = false;
+    this.targetTemperatureArr = [];
+    this.targetTemperatureInProgress = false;
+    this.targetTemperatureTimeout = 1000;
+
+    ThermostatItem.super_.call(this, widget,platform,homebridge);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.ThermostatItem.prototype" id="apidoc.module.homebridge-openhab.ThermostatItem.prototype">module homebridge-openhab.ThermostatItem.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.checkRelativeHumidityState" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.checkRelativeHumidityState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>checkRelativeHumidityState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkRelativeHumidityState = function (state) {
+    if ('Unitialized' === state){
+        return 0;
+    }
+    return +state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       .on('set', this.setTargetHeatingCoolingStateMock.bind(this))
+       .on('get', this.getTargetHeatingCoolingStateMock.bind(this))
+       .setValue(1);
+
+   if (this.itemCurrentRelativeHumidity) {
+       otherService.addCharacteristic(this.homebridge.hap.Characteristic.CurrentRelativeHumidity)
+           .on('get', this.getCurrentRelativeHumidityState.bind(this))
+           .setValue(this.<span class="apidocCodeKeywordSpan">checkRelativeHumidityState</span>(this.itemCurrentRelativeHumidity
+.state));
+   }
+
+   return otherService;
+};
+
+/**
+* Set target temperature when receive emit
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.checkTemperatureState" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.checkTemperatureState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>checkTemperatureState
+        <span class="apidocSignatureSpan">(state)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkTemperatureState = function (state) {
+    if ('Unitialized' === state){
+        return 0.0;
+    }
+    return +state;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+ThermostatItem.prototype.getOtherServices = function() {
+var otherService = new this.homebridge.hap.Service.Thermostat();
+
+//Init CurrentTemperature Characteristic
+otherService.getCharacteristic(this.homebridge.hap.Characteristic.CurrentTemperature)
+    .on('get', this.getCurrentTemperatureState.bind(this))
+    .setValue(this.<span class="apidocCodeKeywordSpan">checkTemperatureState</span>(this.itemCurrentTemperature.state));
+
+this.setTargetTemperatureInitialState = true;
+
+//Init TargetTemperature Characteristic
+otherService.getCharacteristic(this.homebridge.hap.Characteristic.TargetTemperature)
+    .on('set', this.setTargetTemperatureState.bind(this))
+    .on('get', this.getTargetTemperatureState.bind(this))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentHeatingCoolingStateMock" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentHeatingCoolingStateMock">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getCurrentHeatingCoolingStateMock
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentHeatingCoolingStateMock = function (callback) {
+    //Characteristic.CurrentHeatingCoolingState.OFF = 0;
+    //Characteristic.CurrentHeatingCoolingState.HEAT = 1;
+    //Characteristic.CurrentHeatingCoolingState.COOL = 2;
+    callback(undefined,this.homebridge.hap.Characteristic.CurrentHeatingCoolingState.HEAT);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentRelativeHumidityState" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentRelativeHumidityState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getCurrentRelativeHumidityState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentRelativeHumidityState = function (callback) {
+    var self = this;
+    this.log("iOS - request Current relative humidity state from " + this.itemCurrentRelativeHumidity.name + " (" + (self.name)+")");
+    request(self.itemCurrentRelativeHumidity.link + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.itemCurrentRelativeHumidity.name + " (" + (self.name)+"): " + body);
+            callback(undefined,self.checkRelativeHumidityState(body));
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.itemCurrentRelativeHumidity.name + " (" + (self.name)+"): " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentTemperatureState" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.getCurrentTemperatureState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getCurrentTemperatureState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCurrentTemperatureState = function (callback) {
+    var self = this;
+    this.log("iOS - request current temperature state from " + this.itemCurrentTemperature.name + " (" + (self.name)+")");
+    request(self.itemCurrentTemperature.link + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.itemCurrentTemperature.name + " (" + (self.name)+"): " + body);
+            callback(undefined,self.checkTemperatureState(body));
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.itemCurrentTemperature.name + " (" + (self.name)+"): " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getOtherServices" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.getOtherServices">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getOtherServices
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOtherServices = function () {
+    var otherService = new this.homebridge.hap.Service.Thermostat();
+
+    //Init CurrentTemperature Characteristic
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.CurrentTemperature)
+        .on('get', this.getCurrentTemperatureState.bind(this))
+        .setValue(this.checkTemperatureState(this.itemCurrentTemperature.state));
+
+    this.setTargetTemperatureInitialState = true;
+
+    //Init TargetTemperature Characteristic
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.TargetTemperature)
+        .on('set', this.setTargetTemperatureState.bind(this))
+        .on('get', this.getTargetTemperatureState.bind(this))
+        .setValue(this.checkTemperatureState(this.itemTargetTemperature.state));
+
+    //TODO
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.CurrentHeatingCoolingState)
+        .on('get', this.getCurrentHeatingCoolingStateMock.bind(this))
+        .setValue(1);
+
+    //TODO
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.TemperatureDisplayUnits)
+        .on('get', this.getTemperatureDisplayUnits.bind(this))
+        .setValue(this.temperatureDisplayUnits);
+
+    //TODO
+    otherService.getCharacteristic(this.homebridge.hap.Characteristic.TargetHeatingCoolingState)
+        .on('set', this.setTargetHeatingCoolingStateMock.bind(this))
+        .on('get', this.getTargetHeatingCoolingStateMock.bind(this))
+        .setValue(1);
+
+    if (this.itemCurrentRelativeHumidity) {
+        otherService.addCharacteristic(this.homebridge.hap.Characteristic.CurrentRelativeHumidity)
+            .on('get', this.getCurrentRelativeHumidityState.bind(this))
+            .setValue(this.checkRelativeHumidityState(this.itemCurrentRelativeHumidity.state));
+    }
+
+    return otherService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.initListener();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.<span class="apidocCodeKeywordSpan">getOtherServices</span>();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+    return null;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTargetHeatingCoolingStateMock" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTargetHeatingCoolingStateMock">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getTargetHeatingCoolingStateMock
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTargetHeatingCoolingStateMock = function (callback) {
+    //TODO check se si puÃ² anche scrivere
+    callback(undefined,1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTargetTemperatureState" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTargetTemperatureState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getTargetTemperatureState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTargetTemperatureState = function (callback) {
+    var self = this;
+    this.log("iOS - request target temperature state from " + this.itemTargetTemperature.name + " (" + (self.name)+")");
+    request(self.itemTargetTemperature.link + '/state?type=json', function (error, response, body) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            self.log("OpenHAB HTTP - response from " + self.itemTargetTemperature.name + " (" + (self.name)+"): " + body);
+            callback(undefined,self.checkTemperatureState(body));
+        } else {
+            self.log("OpenHAB HTTP - error from " + self.itemTargetTemperature.name + " (" + (self.name)+"): " + error);
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTemperatureDisplayUnits" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.getTemperatureDisplayUnits">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>getTemperatureDisplayUnits
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTemperatureDisplayUnits = function (callback) {
+    callback(undefined,this.temperatureDisplayUnits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.initEmitter" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.initEmitter">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>initEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initEmitter = function () {
+    var self=this;
+    this.thermostatItemEmitter.on('TARGET_TEMPERATURE_UPDATE_EVENT', function() {
+        self.setTargetTemperatureStateFromEmit();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var request = require("request");
+const EventEmitter = require("events");
+
+var ThermostatItem = function(widget,platform,homebridge) {
+//General
+this.temperatureDisplayUnits = homebridge.hap.Characteristic.TemperatureDisplayUnits.CELSIUS;
+this.thermostatItemEmitter = new EventEmitter();
+this.<span class="apidocCodeKeywordSpan">initEmitter</span>();
+
+//CurrentTemperature
+this.itemCurrentTemperature = undefined;
+this.listenerCurrentTemperature = undefined;
+this.wsCurrentTemperature = undefined;
+
+//CurrentRelativeHumidity
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.initListener" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.initListener">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>initListener
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initListener = function () {
+    if ((typeof this.itemCurrentTemperature) == 'undefined'){
+        throw new Error(this.name + " needs CurrentTemperatureItem!");
+    }
+
+    this.listenerCurrentTemperature = this.listenerFactory(
+        this.itemCurrentTemperature.name,
+        this.itemCurrentTemperature.link,
+        this.wsCurrentTemperature,
+        this.log,
+        this.updateCurrentTemperature.bind(this)
+    );
+
+    if ((typeof this.itemTargetTemperature) == 'undefined'){
+        throw new Error(this.name + " needs TargetTemperatureItem!");
+    }
+
+    if ((typeof this.itemCurrentRelativeHumidity) !== 'undefined'){
+        this.listenerCurrentRelativeHumidity = this.listenerFactory(
+            this.itemCurrentRelativeHumidity.name,
+            this.itemCurrentRelativeHumidity.link,
+            this.wsCurrentRelativeHumidity,
+            this.log,
+            this.updateCurrentRelativeHumidity.bind(this)
+        );
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.name = this.platform.useLabelForName ? this.label : this.widget.name;
+
+    AbstractItem.super_.call(this, this.name, homebridge.hap.uuid.generate(String(this.widget.name)));
+
+};
+
+AbstractItem.prototype.getServices = function() {
+    this.<span class="apidocCodeKeywordSpan">initListener</span>();
+    this.setInitialState = true;
+    this.informationService = this.getInformationServices();
+    this.otherService = this.getOtherServices();
+    return [this.informationService, this.otherService];
+};
+
+AbstractItem.prototype.getOtherServices = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentRelativeHumidityItem" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentRelativeHumidityItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setCurrentRelativeHumidityItem
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCurrentRelativeHumidityItem = function (item){
+    this.itemCurrentRelativeHumidity = item;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentTemperatureCItem" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentTemperatureCItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setCurrentTemperatureCItem
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCurrentTemperatureCItem = function (item){
+    this.itemCurrentTemperature = item;
+    this.temperatureDisplayUnits = this.homebridge.hap.Characteristic.TemperatureDisplayUnits.CELSIUS;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentTemperatureFItem" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setCurrentTemperatureFItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setCurrentTemperatureFItem
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCurrentTemperatureFItem = function (item){
+    this.itemCurrentTemperature = item;
+    this.temperatureDisplayUnits = this.homebridge.hap.Characteristic.TemperatureDisplayUnits.FAHRENHEIT;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetHeatingCoolingStateMock" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetHeatingCoolingStateMock">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetHeatingCoolingStateMock
+        <span class="apidocSignatureSpan">(value, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTargetHeatingCoolingStateMock = function (value, callback){
+    callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureCItem" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureCItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureCItem
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTargetTemperatureCItem = function (item){
+    this.itemTargetTemperature = item;
+    this.temperatureDisplayUnits = this.homebridge.hap.Characteristic.TemperatureDisplayUnits.CELSIUS;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureFItem" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureFItem">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureFItem
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTargetTemperatureFItem = function (item){
+    this.itemTargetTemperature = item;
+    this.temperatureDisplayUnits = this.homebridge.hap.Characteristic.TemperatureDisplayUnits.FAHRENHEIT;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureState" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureState">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureState
+        <span class="apidocSignatureSpan">(value, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTargetTemperatureState = function (value, callback){
+    if (this.setTargetTemperatureInitialState) {
+        this.setTargetTemperatureInitialState = false;
+        callback();
+        return;
+    }
+    this.targetTemperatureArr.push(value);
+    this.thermostatItemEmitter.emit('TARGET_TEMPERATURE_UPDATE_EVENT');
+    callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureStateFromEmit" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.setTargetTemperatureStateFromEmit">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>setTargetTemperatureStateFromEmit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTargetTemperatureStateFromEmit = function (){
+    var self=this;
+    if (!this.targetTemperatureInProgress){
+        this.targetTemperatureInProgress = true;
+        setTimeout(function() {
+            var value = self.targetTemperatureArr[self.targetTemperatureArr.length-1];
+            self.log("iOS - send message to " + self.itemTargetTemperature.name + " (" + (self.name)+"): " + value);
+            var command = "" + value;
+            request.post(
+                self.itemTargetTemperature.link,
+                {
+                    body: command,
+                    headers: {'Content-Type': 'text/plain'}
+                },
+                function (error, response, body) {
+                    if (!error &amp;&amp; response.statusCode == 201) {
+                        self.log("OpenHAB HTTP - response from " + self.itemTargetTemperature.name + " (" + (self.name)+"): " +
+body);
+                    } else {
+                        self.log("OpenHAB HTTP - error from " + self.itemTargetTemperature.name + " (" + (self.name)+"): " + error
+);
+                    }
+                    self.targetTemperatureArr = [];
+                    self.targetTemperatureInProgress = false;
+                }
+            );
+        }, self.targetTemperatureTimeout);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    ThermostatItem.super_.call(this, widget,platform,homebridge);
+};
+
+ThermostatItem.prototype.initEmitter = function() {
+    var self=this;
+    this.thermostatItemEmitter.on('TARGET_TEMPERATURE_UPDATE_EVENT', function() {
+        self.<span class="apidocCodeKeywordSpan">setTargetTemperatureStateFromEmit</span>();
+    });
+};
+
+/**
+ * Init all thermostat listener
+ */
+ThermostatItem.prototype.initListener = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.updateCurrentRelativeHumidity" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.updateCurrentRelativeHumidity">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>updateCurrentRelativeHumidity
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCurrentRelativeHumidity = function (message) {
+    this.otherService
+        .addCharacteristic(this.homebridge.hap.Characteristic.CurrentRelativeHumidity)
+        .setValue(this.checkRelativeHumidityState(message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.ThermostatItem.prototype.updateCurrentTemperature" id="apidoc.element.homebridge-openhab.ThermostatItem.prototype.updateCurrentTemperature">
+        function <span class="apidocSignatureSpan">homebridge-openhab.ThermostatItem.prototype.</span>updateCurrentTemperature
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateCurrentTemperature = function (message) {
+    this.otherService
+        .getCharacteristic(this.homebridge.hap.Characteristic.CurrentTemperature)
+        .setValue(this.checkTemperatureState(message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.Utility" id="apidoc.module.homebridge-openhab.Utility">module homebridge-openhab.Utility</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.Utility.addInheritance" id="apidoc.element.homebridge-openhab.Utility.addInheritance">
+        function <span class="apidocSignatureSpan">homebridge-openhab.Utility.</span>addInheritance
+        <span class="apidocSignatureSpan">(subclass, superclass)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addInheritance = function (subclass, superclass) {
+    var proto = subclass.prototype;
+    inherits(subclass, superclass);
+    subclass.prototype.parent = superclass.prototype;
+    for (var a in proto) {
+        subclass.prototype[a] = proto[a];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    subclass.prototype.parent = superclass.prototype;
+    for (var a in proto) {
+        subclass.prototype[a] = proto[a];
+    }
+};
+
+exports.addSupportTo = function(subclass, superclass) {
+    exports.<span class="apidocCodeKeywordSpan">addInheritance</span>(subclass,superclass);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.Utility.addSupportTo" id="apidoc.element.homebridge-openhab.Utility.addSupportTo">
+        function <span class="apidocSignatureSpan">homebridge-openhab.Utility.</span>addSupportTo
+        <span class="apidocSignatureSpan">(subclass, superclass)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSupportTo = function (subclass, superclass) {
+    exports.addInheritance(subclass,superclass);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+//////// EXPORTS /////////
+
+module.exports = function(homebridge) {
+Accessory = homebridge.hap.Accessory;
+Homebridge = homebridge;
+
+Utility.<span class="apidocCodeKeywordSpan">addSupportTo</span>(ItemFactory.AbstractItem, Accessory);
+Utility.addSupportTo(ItemFactory.SwitchItem, ItemFactory.AbstractItem);
+Utility.addSupportTo(ItemFactory.LightbulbItem, ItemFactory.SwitchItem);
+Utility.addSupportTo(ItemFactory.FanItem, ItemFactory.SwitchItem);
+Utility.addSupportTo(ItemFactory.OutletItem, ItemFactory.SwitchItem);
+Utility.addSupportTo(ItemFactory.DimmerItem, ItemFactory.AbstractItem);
+Utility.addSupportTo(ItemFactory.RollershutterItem, ItemFactory.AbstractItem);
+Utility.addSupportTo(ItemFactory.TemperatureSensorItem, ItemFactory.AbstractItem);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.WSListener" id="apidoc.module.homebridge-openhab.WSListener">module homebridge-openhab.WSListener</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.WSListener.WSListener" id="apidoc.element.homebridge-openhab.WSListener.WSListener">
+        function <span class="apidocSignatureSpan">homebridge-openhab.</span>WSListener
+        <span class="apidocSignatureSpan">(itemName, itemUrl, ws, log, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">WSListener = function (itemName, itemUrl, ws, log, callback) {
+    this.itemName = itemName;
+    this.itemUrl = itemUrl;
+    this.log = log;
+    this.ws = ws;
+    this.callback = callback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-openhab.WSListener.prototype" id="apidoc.module.homebridge-openhab.WSListener.prototype">module homebridge-openhab.WSListener.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.WSListener.prototype.runForever" id="apidoc.element.homebridge-openhab.WSListener.prototype.runForever">
+        function <span class="apidocSignatureSpan">homebridge-openhab.WSListener.prototype.</span>runForever
+        <span class="apidocSignatureSpan">(interval)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runForever = function (interval) {
+    var self = this;
+    var intervalId = setInterval(function timeout() {
+        if (typeof self.ws !== 'undefined'){
+            self.ws.ping();
+        } else {
+            clearInterval(intervalId);
+        }
+    }, interval);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (typeof this.ws == 'undefined') {
+    this.ws = new WebSocket(this.itemUrl.replace('http:', 'ws:') + '/state?type=json');
+}
+
+this.ws.on('open', function() {
+    self.log("OpenHAB WS - new connection for "+self.itemName);
+    self.<span class="apidocCodeKeywordSpan">runForever</span>(15000);
+});
+
+this.ws.on('message', function(message) {
+    self.log("OpenHAB WS - message from " +self.itemName+": "+ message);
+    self.callback(message);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-openhab.WSListener.prototype.startListener" id="apidoc.element.homebridge-openhab.WSListener.prototype.startListener">
+        function <span class="apidocSignatureSpan">homebridge-openhab.WSListener.prototype.</span>startListener
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startListener = function () {
+    var self = this;
+
+    if (typeof this.ws == 'undefined') {
+        this.ws = new WebSocket(this.itemUrl.replace('http:', 'ws:') + '/state?type=json');
+    }
+
+    this.ws.on('open', function() {
+        self.log("OpenHAB WS - new connection for "+self.itemName);
+        self.runForever(15000);
+    });
+
+    this.ws.on('message', function(message) {
+        self.log("OpenHAB WS - message from " +self.itemName+": "+ message);
+        self.callback(message);
+    });
+
+    this.ws.on('close', function close() {
+        self.log("OpenHAB WS - closed connection for "+self.itemName);
+        self.ws = undefined;
+        self = undefined;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+AbstractItem.prototype.initListener = function() {
+    if (typeof this.listener == 'undefined' || typeof this.ws == 'undefined') {
+        this.listener = this.listenerFactory(this.name,this.url,this.ws,this.log, this.updateCharacteristics.bind(this));
+    }
+};
+
+AbstractItem.prototype.listenerFactory = function(itemName,itemUrl,ws,log,callback) {
+    return new WSListener(itemName,itemUrl,ws,log,callback.bind(this)).<span class="apidocCodeKeywordSpan">startListener</span>();
+};
+
+module.exports = AbstractItem;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
